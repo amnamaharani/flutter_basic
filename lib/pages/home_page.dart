@@ -1,0 +1,118 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_basic/theme.dart';
+
+class Home_Page extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: backgroundColor,
+        body: SafeArea(
+          child: Center(
+            child: SingleChildScrollView(
+              child: Column(
+                children: <Widget>[
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Text(
+                    'Profile Picture',
+                    style: TextStyle(
+                      color: primaryColor,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(height: 50),
+                  Image.asset(
+                    'assets/images/primary.png',
+                    width: 140,
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Text(
+                    'Anne Margaritha',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 4,
+                  ),
+                  Text(
+                    'UX Designer',
+                    style: TextStyle(
+                      color: greyColor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 70,
+                  ),
+                  Wrap(
+                    spacing: 38,
+                    runSpacing: 40,
+                    children: [
+                      Image.asset(
+                        'assets/images/item_1.png',
+                        width: 80,
+                      ),
+                      Image.asset(
+                        'assets/images/item_2.png',
+                        width: 80,
+                      ),
+                      Image.asset(
+                        'assets/images/item_3.png',
+                        width: 80,
+                      ),
+                      Image.asset(
+                        'assets/images/item_4.png',
+                        width: 80,
+                      ),
+                      Image.asset(
+                        'assets/images/item_5.png',
+                        width: 80,
+                      ),
+                      Image.asset(
+                        'assets/images/item_6.png',
+                        width: 80,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 70,
+                  ),
+                  Container(
+                    width: 224,
+                    height: 55,
+                    child: RaisedButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      color: whiteColor,
+                      onPressed: () {},
+                      child: Text(
+                        'Update Profile',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 76,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
